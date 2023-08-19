@@ -228,10 +228,10 @@ namespace FischlWorks_FogWar
 
         [BigHeader("Scan Properties")]
         [SerializeField]
-        [Range(1, 300)]
+        [Range(1, 10000)]
         private int levelDimensionX = 11;
         [SerializeField]
-        [Range(1, 300)]
+        [Range(1, 10000)]
         private int levelDimensionY = 11;
         [SerializeField]
         private float unitScale = 1;
