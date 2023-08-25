@@ -196,6 +196,8 @@ namespace FischlWorks_FogWar
         [SerializeField]
         [Range(1, 30)]
         private float FogRefreshRate = 10;
+        [SerializeField]
+        private Transform Player;
 
         [BigHeader("Fog Properties")]
         [SerializeField]
@@ -374,7 +376,8 @@ namespace FischlWorks_FogWar
 
             fogPlane.transform.position = new Vector3(
                 levelMidPoint.position.x,
-                levelMidPoint.position.y + fogPlaneHeight,
+                //levelMidPoint.position.y + fogPlaneHeight,
+                levelMidPoint.position.y + Player.position.y,
                 levelMidPoint.position.z);
 
             fogPlane.transform.localScale = new Vector3(
@@ -411,7 +414,8 @@ namespace FischlWorks_FogWar
         {
             fogPlane.transform.position = new Vector3(
                 levelMidPoint.position.x,
-                levelMidPoint.position.y + fogPlaneHeight,
+                //levelMidPoint.position.y + fogPlaneHeight,
+                levelMidPoint.position.y + Player.position.y,
                 levelMidPoint.position.z);
 
             FogRefreshRateTimer += Time.deltaTime;
